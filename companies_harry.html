@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/jquery.jscrollpane.css">
     <link rel="stylesheet" href="assets/css/daterangepicker.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -225,9 +224,10 @@
 
             // fetch the row data to use and one ready provide it to the Grid via the Grid API
             agGrid.simpleHttpRequest({
-                    url: 'http://localhost:8080/' + 'https://thereviewsolution.com/app/index.php/api/v3/GetExpressBBBEndpointv3/access_token/STR5555555555/bbbid/0382'
+                    url: 'http://localhost:8080/readfile'
                 })
                 .then(data => {
+                    console.log(data);
                     gridOptions.api.setRowData(data.result);
                 });
 
